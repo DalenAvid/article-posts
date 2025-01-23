@@ -1,0 +1,23 @@
+.articleList{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 70px;
+    max-width: 1400px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    padding: 10px;
+}
+.articleItemContainer{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    align-items: start;
+    color: #703412;
+}
+.articleImg{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}

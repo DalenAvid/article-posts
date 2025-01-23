@@ -1,0 +1,70 @@
+/* Header.module.scss */
+
+/* Базовий стиль Header */
+.header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    position: relative;
+  }
+  
+  /* Навігаційне меню */
+  .navMenu {
+    display: flex;
+    gap: 20px;
+  
+    .navItem {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1rem;
+  
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  
+    &.open {
+      transform: translateY(0);
+    }
+  }
+  
+  /* Бургер-меню */
+  .burgerMenu {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  
+    .burgerLine {
+      width: 25px;
+      height: 3px;
+      background-color: #fff;
+      border-radius: 3px;
+    }
+  }
+  
+  /* Медіа-запити для мобільних пристроїв */
+  @media (max-width: 768px) {
+    .burgerMenu {
+      display: flex;
+    }
+  
+    .navMenu {
+      position: absolute;
+      top: 50px;
+      right: 20px;
+      background-color: #333;
+      flex-direction: column;
+      gap: 15px;
+      padding: 10px 20px;
+      border-radius: 5px;
+      transform: translateY(-200%);
+      transition: transform 0.3s ease-in-out;
+    }
+  }
+  
