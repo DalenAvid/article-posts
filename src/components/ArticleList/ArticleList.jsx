@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./ArticleList.module.scss"
+
 const ArticleList = ({ articles }) => {
     return (
         <div>
@@ -16,9 +17,10 @@ const ArticleList = ({ articles }) => {
                             alt={article.title}
                             className={styles.articleImg}
                         />
+                        
                         <h3>{article.title}</h3>
                         <p>{article.description}</p>
-                        
+
                         <Link to={`/article/${article.id}`}>Read More</Link>
                     </div>
                 ))}
